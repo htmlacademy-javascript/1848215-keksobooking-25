@@ -43,13 +43,13 @@ const renderSuccessMessage = () => {
   renderElement(document.body, createSuccessTemplate);
   addListeners();
   resetMap();
-  setStartAddressValue();
   clearImageBlocks();
   submitButton.disabled = false;
   setTimeout(() => {
     addForm.reset();
     filterForm.reset();
     sliderElement.noUiSlider.reset();
+    setStartAddressValue();
   });
 };
 

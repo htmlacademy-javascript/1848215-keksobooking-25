@@ -1,5 +1,7 @@
 import {sendData} from './api.js';
 
+const MAX_PRICE_HOUSING = 100000;
+
 const formAdvert = document.querySelector('.ad-form');
 const submitButton = document.querySelector('.ad-form__submit');
 
@@ -25,7 +27,6 @@ const minPriceHousing = {
   palace: 10000,
 };
 
-const MAX_PRICE_HOUSING = 100000;
 const validatePriceAdvert = () =>
   priceRoom.value >= minPriceHousing[typeRoom.value] && priceRoom.value <= MAX_PRICE_HOUSING;
 

@@ -40,12 +40,14 @@ const onPhotoInputsChange = (evt) => {
   }
 };
 
-export const clearImageBlocks = () => {
+const clearImageBlocks = () => {
   previewAvatar.src = DEFAULT_AVATAR_IMAGE;
   photoContainer.innerHTML = '';
 };
 
-export const addPhotoInputsListeners = () => {
+const addPhotoInputsListeners = () => {
   avatarInput.addEventListener('change', onPhotoInputsChange);
   photoInput.addEventListener('change', onPhotoInputsChange);
 };
+
+export {clearImageBlocks, addPhotoInputsListeners};
